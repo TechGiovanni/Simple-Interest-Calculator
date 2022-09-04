@@ -1,9 +1,9 @@
 function compute() {
-	//Create references to the input elements to validate
-	const principal = document.getElementById('principal').value;
-
-	//To add the focus funcition to the input field if the input is blank
+	//To add the focus method to the Amount input field once ok is clicked on the alert
 	const principals = document.getElementById('principal');
+
+	//Create references to the input elements to validate
+	let principal = document.getElementById('principal').value;
 
 	const rate = document.getElementById('rate').value;
 
@@ -22,9 +22,9 @@ function compute() {
 			', ' +
 			'\n at an interest rate of ' +
 			rate +
-			'. ' +
+			'%, ' +
 			'\n You will receive an amount of ' +
-			amount +
+			interest +
 			', ' +
 			'\n in the year ' +
 			year;
