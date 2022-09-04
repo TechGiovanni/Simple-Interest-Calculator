@@ -1,5 +1,5 @@
 function compute() {
-	//To add the focus method to the Amount input field once ok is clicked on the alert
+	//To add the focus method to the Amount input field once 'OK' is clicked on the alert popup
 	const principals = document.getElementById('principal');
 
 	//Create references to the input elements to validate
@@ -13,12 +13,12 @@ function compute() {
 
 	let year = new Date().getFullYear() + parseInt(years);
 
-	// Check if the input is greater than 0
+	// Check if the input is greater than 0 else Alert the user to inut a positive number
 	const condition1 = principal > 0;
 	if (condition1) {
 		document.getElementById('result').innerText =
 			'If you deposit ' +
-			principal +
+			interest +
 			', ' +
 			'\n at an interest rate of ' +
 			rate +
@@ -28,13 +28,14 @@ function compute() {
 			', ' +
 			'\n in the year ' +
 			year;
+		document.result.style.backgroundColor = 'red';
 	} else {
 		alert('Enter a positive number');
 		principals.focus();
 	}
 }
 
-// Modifies the range percentage value
+// Modifies the range input to display the value on the screen
 function updateRate() {
 	let rateval = document.getElementById('rate').value;
 	document.getElementById('rate_val').innerText = rateval;
