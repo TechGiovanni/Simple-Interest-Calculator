@@ -4,6 +4,7 @@ function compute() {
 
 	//Create references to the input elements to validate
 	let principal = document.getElementById('principal').value;
+	document.getElementById('principal').style.background.color = 'yellow';
 
 	const rate = document.getElementById('rate').value;
 
@@ -28,7 +29,6 @@ function compute() {
 			', ' +
 			'\n in the year ' +
 			year;
-		document.result.style.backgroundColor = 'red';
 	} else {
 		alert('Enter a positive number');
 		principals.focus();
